@@ -1,4 +1,18 @@
 defmodule Ledgex.Web.Scalar.Date do
+  @moduledoc """
+  Provides scalar handling for dates.
+
+  ## Usage
+
+  The `Date` scalar parses date strings in ISO 8601 format (YYYY-MM-DD)
+  into `Date` structs.
+
+  Dates are serialized back to strings in the same format.
+
+  This module provides the `parse_date/1` and `serialize_date/1` functions
+  to handle parsing and serialization.
+  """
+
   use Absinthe.Schema.Notation
 
   alias Absinthe.Blueprint.Input.Null, as: NullBlueprint
@@ -39,5 +53,14 @@ defmodule Ledgex.Web.Scalar.Date do
   def parse_date(%NullBlueprint{}), do: {:ok, nil}
   def parse_date(_), do: :error
 
+  @doc """
+  Serializes a `Date` struct into an ISO 8601 date string.
+
+  ## Examples
+
+      iex> Ledgex.Web.Scalar.Date.serialize_date(~D[2018-01-01])
+      "2018-01-01"
+  """
+  @spec serialize_date(Date.t()) :: String.t()
   def serialize_date(date), do: Date.to_iso8601(date)
 end

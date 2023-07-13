@@ -32,7 +32,9 @@ defmodule Ledgex.MixProject do
       # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
       {:absinthe_plug, "~> 1.5.8"},
       {:absinthe, "~> 1.7.4"},
+      {:credo, "~> 1.7.0", only: :dev, runtime: false},
       {:ecto_sql, "~> 3.10.1"},
+      {:dialyxir, "~> 1.3.0", only: :dev, runtime: false},
       {:jason, "~> 1.4.1"},
       {:mix_test_watch, "~> 1.1", only: :dev, runtime: false},
       {:phoenix, "~> 1.7.7"},

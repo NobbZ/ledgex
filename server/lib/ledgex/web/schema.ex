@@ -1,4 +1,8 @@
 defmodule Ledgex.Web.Schema do
+  @moduledoc """
+  The GraphQL schema.
+  """
+
   use Absinthe.Schema
 
   alias Ledgex.Web.Resolver.Person, as: PersonResolver

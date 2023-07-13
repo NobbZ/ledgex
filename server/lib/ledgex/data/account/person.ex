@@ -1,4 +1,8 @@
 defmodule Ledgex.Data.Account.Person do
+  @moduledoc """
+  The Person schema.
+  """
+
   use Ecto.Schema
   import Ecto.Changeset
 

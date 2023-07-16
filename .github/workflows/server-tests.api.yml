@@ -7,7 +7,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    name: Test python API
+    name: Test Elixir Server
     steps:
       - uses: actions/checkout@v3
       - name: Set up Elixir
@@ -22,7 +22,9 @@ jobs:
           key: ${{ runner.os }}-mix-${{ hashFiles('**/mix.lock') }}
           restore-keys: ${{ runner.os }}-mix-.txt
       - name: Install dependencies
-        run: mix deps.get
+        run: |
+          cd server
+          mix deps.get
       - name: Run tests and collect coverage
         run: pytest --cov=api.calculator --cov-report=xml
       - name: Upload coverage reports to Codecov with GitHub Action

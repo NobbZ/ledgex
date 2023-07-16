@@ -1,0 +1,12 @@
+query getIdentifyable($id: ID!) {
+  search(id: $id) {
+    id
+    __typename
+    ... on Person {
+      first_name
+      last_name
+      email
+      birthdate
+    }
+  }
+}

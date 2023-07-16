@@ -10,6 +10,8 @@ defmodule Ledgex do
     children = [
       # Start the repo
       Ledgex.Repo,
+      # Start the caches
+      {Cachex, name: Ledgex.Cache.IDCache},
       # Start the Endpoint (http/https)
       Ledgex.Web.Endpoint
     ]

@@ -1,0 +1,37 @@
+name: Dart testing workflow
+
+on:
+  - push
+  - pull_request
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Test Dart Client
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Dart SDK
+        uses: dart-lang/setup-dart@d6a63dab3335f427404425de0fbfed4686d93c4f
+        with:
+          sdk: "3.0.5"
+      - name: Install dependencies
+        run: |
+          cd client
+          dart pub get
+      - name: Run tests and collect coverage
+        run: |
+          cd client
+          dart test --coverage=cover
+          dart run coverage:format_coverage \
+            --lcov \
+            --in=cover \
+            --out=coverage.lcov \
+            --report-on=lib \
+            --report-on=bin \
+            --report-on=test
+      - name: Upload coverage reports to Codecov with GitHub Action
+        uses: codecov/codecov-action@v3
+        with:
+          flags: client
+          files: client/coverage.lcov
+          token: ${{ secrets.CODECOV_TOKEN }}

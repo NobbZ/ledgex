@@ -26,7 +26,7 @@ jobs:
           cd server
           mix deps.get
       - name: Run tests and collect coverage
-        run: pytest --cov=api.calculator --cov-report=xml
+        run: mix coveralls.json
       - name: Upload coverage reports to Codecov with GitHub Action
         uses: codecov/codecov-action@v3
         with:

@@ -25,11 +25,6 @@ defmodule Ledgex.Cache.IDCache do
   First checks the cache. If not found, scans all valid identifyable tables.
 
   Returns `{:ok, object}` if found, `{:error, reason}` if not found.
-
-  ## Examples
-
-      iex> Ledgex.Cache.IDCache.get("123")
-      {:ok, %Person{id: "123", ...}}
   """
   def get(id) do
     Cachex.execute!(__MODULE__, fn cache ->

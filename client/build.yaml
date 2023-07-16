@@ -1,0 +1,8 @@
+targets:
+  $default:
+    builders:
+      graphql_codegen:
+        options:
+          outputDirectory: __generated__
+          clients:
+            - graphql

@@ -39,7 +39,7 @@ defmodule Ledgex.MixProject do
       {:absinthe, "~> 1.7.4"},
       {:cachex, "~> 3.6.0"},
       {:credo, "~> 1.7.0", only: :dev, runtime: false},
-      {:dialyxir, "~> 1.3.0", only: :dev, runtime: false},
+      {:dialyxir, "~> 1.4.0", only: :dev, runtime: false},
       {:ecto_sql, "~> 3.10.1"},
       {:ex_machina, "~> 2.7.0", only: :test},
       {:excoveralls, "~> 0.16.1", only: [:dev, :test]},

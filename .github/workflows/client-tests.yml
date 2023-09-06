@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Test Dart Client
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Set up Dart SDK
         uses: dart-lang/setup-dart@0970dcf46e056fb521e7027775fdff076fe1e732
         with:

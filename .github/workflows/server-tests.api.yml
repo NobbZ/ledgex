@@ -18,7 +18,7 @@ jobs:
         ports:
           - "5432:5432"
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Set up Elixir
         uses: erlef/setup-beam@673a8fbd6e4f41cc19b52f0ec7185b45e604d3f6
         with:

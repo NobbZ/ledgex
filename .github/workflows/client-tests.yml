@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Set up Dart SDK
-        uses: dart-lang/setup-dart@0970dcf46e056fb521e7027775fdff076fe1e732
+        uses: dart-lang/setup-dart@8a4b97ea2017cc079571daec46542f76189836b1
         with:
           sdk: "3.0.5"
       - name: Install dependencies

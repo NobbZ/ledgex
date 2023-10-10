@@ -42,7 +42,7 @@ defmodule Ledgex.MixProject do
       {:dialyxir, "~> 1.4.0", only: :dev, runtime: false},
       {:ecto_sql, "~> 3.10.1"},
       {:ex_machina, "~> 2.7.0", only: :test},
-      {:excoveralls, "~> 0.16.1", only: [:dev, :test]},
+      {:excoveralls, "~> 0.18.0", only: [:dev, :test]},
       {:faker, "~> 0.17", only: :test},
       {:jason, "~> 1.4.1"},
       {:mix_test_watch, "~> 1.1", only: :dev, runtime: false},

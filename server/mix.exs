@@ -40,7 +40,7 @@ defmodule Ledgex.MixProject do
       {:cachex, "~> 3.6.0"},
       {:credo, "~> 1.7.0", only: :dev, runtime: false},
       {:dialyxir, "~> 1.4.0", only: :dev, runtime: false},
-      {:ecto_sql, "~> 3.10.1"},
+      {:ecto_sql, "~> 3.11.0"},
       {:ex_machina, "~> 2.7.0", only: :test},
       {:excoveralls, "~> 0.18.0", only: [:dev, :test]},
       {:faker, "~> 0.17", only: :test},

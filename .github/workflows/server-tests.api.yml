@@ -20,7 +20,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Set up Elixir
-        uses: erlef/setup-beam@980f47ea52afa4c3bf2a68d5a90051b7bb60f09c
+        uses: erlef/setup-beam@cd1df4cd092c4edc2de23520c81d783406cad9d7
         with:
           elixir-version: "1.15.2"
           otp-version: "26.0"

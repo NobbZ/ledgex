@@ -9,7 +9,7 @@ environment:
 # Add regular dependencies here.
 dependencies:
   graphql: ^5.1.2
-  web_socket_channel: 2.2.0
+  web_socket_channel: 3.0.1
   # path: ^1.8.0
 
 dev_dependencies:

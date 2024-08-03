@@ -48,7 +48,7 @@ defmodule Ledgex.MixProject do
       {:mix_test_watch, "~> 1.1", only: :dev, runtime: false},
       {:phoenix, "~> 1.7.7"},
       {:plug_cowboy, "~> 2.6"},
-      {:postgrex, "~> 0.17.1"}
+      {:postgrex, "~> 0.19.0"}
     ]
   end
 
